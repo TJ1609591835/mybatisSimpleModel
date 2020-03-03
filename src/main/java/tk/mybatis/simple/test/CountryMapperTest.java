@@ -12,6 +12,16 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.*;
 import tk.mybatis.simple.model.Country;
 
+/**
+ * ClassName: CountryMapperTest
+ * Package: tk.mybatis.simple.test
+ * created By taojun
+ * Description: 城市测试用例
+ *
+ * @date: 2020/3/3 23:46
+ * @author: taojun
+ * @email: 1609591835@qq.com
+ */
 public class CountryMapperTest {
     private static SqlSessionFactory sqlSessionFactory;
 
@@ -41,7 +51,7 @@ public class CountryMapperTest {
     private void printCountryList(List<Country> countryList){
         for(Country country : countryList){
             System.out.printf("%-4d%4s%4s\n",
-                    country.getId(), country.getCountryname(), country.getCountrycode());
+                    country.getId(), country.getCountryName(), country.getCountryCode());
         }
     }
 }

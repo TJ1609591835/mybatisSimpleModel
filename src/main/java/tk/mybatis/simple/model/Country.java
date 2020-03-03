@@ -1,31 +1,29 @@
 package tk.mybatis.simple.model;
 
+import lombok.Data;
+
+/**
+ * ClassName: Country
+ * Package: tk.mybatis.simple.model
+ * created By taojun
+ * Description: 城市表
+ *
+ * @date: 2020/3/3 23:46
+ * @author: taojun
+ * @email: 1609591835@qq.com
+ */
+@Data
 public class Country {
-    private Long id;// 城市表id
-    private String countryname;// 城市姓名中文
-    private String countrycode;// 城市姓名英文
-    // getter 和 setter 方法
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getCountryname() {
-        return countryname;
-    }
-
-    public void setCountryname(String countryname) {
-        this.countryname = countryname;
-    }
-
-    public String getCountrycode() {
-        return countrycode;
-    }
-
-    public void setCountrycode(String countrycode) {
-        this.countrycode = countrycode;
-    }
+    /**
+     * 城市表id
+     */
+    private Long id;
+    /**
+     * 城市姓名中文
+     */
+    private String countryName;
+    /**
+     * 城市姓名英文
+     */
+    private String countryCode;
 }

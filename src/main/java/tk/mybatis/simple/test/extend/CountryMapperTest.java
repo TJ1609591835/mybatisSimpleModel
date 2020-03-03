@@ -13,6 +13,16 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.List;
 
+/**
+ * ClassName: CountryMapperTest
+ * Package: tk.mybatis.simple.test.extend
+ * created By taojun
+ * Description: 城市表
+ *
+ * @date: 2020/3/3 23:46
+ * @author: taojun
+ * @email: 1609591835@qq.com
+ */
 public class CountryMapperTest extends BaseMapperTest {
 
     @Test
@@ -30,7 +40,7 @@ public class CountryMapperTest extends BaseMapperTest {
     private void printCountryList(List<Country> countryList){
         for(Country country : countryList){
             System.out.printf("%-4d%4s%4s\n",
-                    country.getId(), country.getCountryname(), country.getCountrycode());
+                    country.getId(), country.getCountryName(), country.getCountryCode());
         }
     }
 }
