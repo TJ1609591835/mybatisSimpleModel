@@ -1,0 +1,22 @@
+OGNL的用法:
+1.e1 or e2
+2.e1 and e2
+3.e1 == e2 或 e1 eq e2
+4.el != e2 或 e1 neq e2
+5.el lt e2: 小于
+6.el lte e2: 小于等于, 其他表示为gt(大于)、gte(大于等于)
+7.el + e2、e1 * e2、e1/e2、el - e2、e1%e2
+8.!e 或 not e: 非, 取反
+9.e.method(args): 调用对象方法
+10.e.property: 对象属性值
+11.e1[e2]: 按索引取值(List、数组和 Map)  注: map['userName'] 或 map.userName来获取map中key 为 userName 的值, 这里一定要注意, 不管userName的值是不是null , 必须保证userName这个key存在, 否则就会报错
+12.@class@method(args): 调用类的静态字段值
+13.@class@field: 调用类的静态字段值
+表达式1~4是最常用的4中情况。另外有些时候当需要判断一个集合是否为空时, 可能会出现如下判断
+<if test="list != null and list.size() > 0">
+<!--其他-->
+</if>
+
+<if  test="@tk.mybatis.simple.util.StringUtil@isNotEmpty(userName)">
+    and user_name like concat('%', #{userName}, '%')
+</if>

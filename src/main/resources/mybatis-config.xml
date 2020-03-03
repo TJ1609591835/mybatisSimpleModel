@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+    <typeAliases>
+        <package name="tk.mybatis.simple.model"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC">
+                <property name="" value=""/>
+            </transactionManager>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 多数据库支持 -->
+    <databaseIdProvider type="DB_VENDOR" >
+        <property name="SQL Server" value="sqlserver"/>
+        <property name="DB2" value="db2"/>
+        <property name="Oracle" value="oracle"/>
+        <property name="MySQL" value="mysql"/>
+        <property name="PostgreSQL" value="postgresql"/>
+        <property name="Derby" value="derby"/>
+        <property name="HSQL" value="hsqldb"/>
+        <property name="H2" value="h2"/>
+    </databaseIdProvider>
+    <!-- 第一种: 导入mappers配置文件 -->
+    <mappers>
+        <mapper resource="tk.mybatis.simple.mapper/CountryMapper.xml"/>
+        <mapper resource="tk.mybatis.simple.mapper/UserMapper.xml"/>
+        <mapper resource="tk.mybatis.simple.mapper/RoleMapper.xml"/>
+        <mapper resource="tk.mybatis.simple.mapper/PrivilegeMapper.xml"/>
+        <mapper resource="tk.mybatis.simple.mapper/UserRoleMapper.xml"/>
+        <mapper resource="tk.mybatis.simple.mapper/RolePrivilegeMapper.xml"/>
+    </mappers>
+    <!-- 第二种: -->
+    <!--<mappers>
+        <package name="tk.mybatis.simple.mapper"></package>
+    </mappers>-->
+</configuration>

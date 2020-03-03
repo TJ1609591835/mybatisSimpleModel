@@ -1,0 +1,10 @@
+### 进入当前文件夹下的目录
+javadoc -d apidoc -windowtitle 测试 -doctitle 学习javadoc工具的测试API文档 -header 我的类 lee/*Test.java yeeku/*.java
+
+javadoc -d apidoc -windowtitle 测试 -doctitle 学习javadoc工具的测试API文档 -header 我的类 -version -author yeeku/JavadocTagTest.java
+
+### 可能出现问题:
+### 1.编码问题 UTF-8无法识别, 切换成ANSI, 如果idea想读取, 需要通过GBK的编码方式来读取
+### 注: 生成的是中文版的api文档, 官网上下的是英文版的
+### 2.两次javadoc, 不会通融, 后者覆盖前者
+### 注: */*.java不行, 多文件夹可通过空格选中

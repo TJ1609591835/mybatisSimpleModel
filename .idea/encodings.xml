@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/tk/mybatis/simple/annotation/API_javadoc/lee/JavadocTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/tk/mybatis/simple/annotation/API_javadoc/yeeku/JavadocTagTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/tk/mybatis/simple/annotation/API_javadoc/yeeku/Test.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/tk/mybatis/simple/annotation/MyTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/tk/mybatis/simple/annotation/ProcessorTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/tk/mybatis/simple/annotation/RunTests.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/tk/mybatis/simple/annotation/Testable.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
