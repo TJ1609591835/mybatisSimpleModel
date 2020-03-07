@@ -138,4 +138,11 @@ public interface RoleMapper {
      * @return
      */
     List<SysRole> selectAllRoleAndPrivileges();
+
+    /**
+     * 根据用户id 查询对应的角色
+     * @param id
+     * @return
+     */
+    SysRole selectRoleByUserId(Long id);
 }

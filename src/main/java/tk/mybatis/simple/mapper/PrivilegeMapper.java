@@ -10,5 +10,10 @@ public interface PrivilegeMapper {
     @SelectProvider(type = PrivilegeProvider.class, method = "selectById")
     SysPrivilege selectById(Long id);
 
-
+    /**
+     * 根据roleId来查询其对应权限
+     * @param id
+     * @return
+     */
+    SysPrivilege selectPrivilegeByRoleId(Long id);
 }

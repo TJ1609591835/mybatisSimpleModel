@@ -565,6 +565,30 @@ public class UserMapperTest extends BaseMapperTest {
     }
 
     /**
+     * collection多层懒加载
+     */
+    @Test
+    public void testSelectAllUserAndRolesSelect(){
+        // 获取sqlSession
+        SqlSession sqlSession = getSqlSession();
+        try {
+            // 获取 UserMapper 接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            SysUser user = userMapper.selectAllUserAndRolesSelect(1L);
+            System.out.println("用户名: " + user.getUserName());
+            for(SysRole role : user.getRoleList()){
+                System.out.println("角色名: " + role.getRoleName());
+                for(SysPrivilege privilege : role.getPrivilegeList()){
+                    System.out.println("权限名: " + privilege.getPrivilegeName());
+                }
+            }
+        } finally {
+            // 不要忘记关闭 sqlSession
+            sqlSession.close();
+        }
+    }
+
+    /**
      * 通过main方法来执行mybatis
      */
     /*public void testSelectAll(){

@@ -4,6 +4,6 @@
 <mapper namespace="tk.mybatis.simple.mapper.CountryMapper">
     <!-- id爆红, 是因为idea中的插件(Free MyBatis plugin)找不到dao层下的接口 -->
     <select id="selectAll" resultType="Country">
-        select id, countryname, countrycode from country
+        select id, countryName, countryCode from country
     </select>
 </mapper>

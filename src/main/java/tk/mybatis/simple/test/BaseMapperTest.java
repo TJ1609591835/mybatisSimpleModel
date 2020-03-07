@@ -8,7 +8,14 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 /**
- * 基础测试类
+ * ClassName: BaseMapperTest
+ * Package: tk.mybatis.simple.test
+ * created By taoJun
+ * Description: 基础测试类
+ *
+ * @date: 2020/3/3 23:46
+ * @author: taoJun
+ * @email: 1609591835@qq.com
  */
 public class BaseMapperTest {
     private static SqlSessionFactory sqlSessionFactory;
